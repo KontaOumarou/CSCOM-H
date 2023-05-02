@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Acceuil </title>
+      <link rel="icon" type="img/ico" href="{% static 'images/favicon.ico' %}" >
+      <link rel="stylesheet" href="{% static 'assets\bootstrap.css' %}">
+      <link rel="stylesheet" href="assets/Lcd.ttf">
+      <link rel="stylesheet" href="{% static 'assets\style.css' %}">
+      <style>
+       body{
+background: url("{%  static 'images/mobile-internet-banking-abstract-conceptual-blue-background-digital-safe-deposit-with-online.jpg'  %}");
+background-repeat: no-repeat;
+background-size: cover;
+}
+      </style>
+</head>
+<body>
+    <!--  Barre de navigation  -->
+      <header>
+            <nav class="navbar navbar-expand-lg shadow-lg" id="bar">
+              <div class="container">
+
+                <a class="navbar-brand" href="/">
+                  <img src="{% static 'images\CSCOMH-removebg-preview.png' %}" alt="" width="70">
+                </a>
+
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active text-white" aria-current="page" href="/">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">Sa Biographie</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">Ses Enseignements</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">Ses Ouevres</a>
+                    </li>
+                    <!--
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                        -->
+
+                  </ul>
+                  <form class="d-flex col-3">
+                    <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+                    <button class="btn btn-danger" type="submit">Rechercher</button>
+                  </form>
+                  
+                    <a class="nav-link active btn btn-success text-white ms-5 p-1" href="{% url 'login' %}">Se connecter</a>
+
+                    <a class="nav-link active btn btn-info text-white  ms-1 p-1" href="{% url 'register' %}">Créer un compte</a>
+                  
+                </div>
+              </div>
+            </nav>
+      </header> 
+
+     {% block content  %}
+
+    {% endblock  %}
+      <!--  Footer -->
+      <footer class="py-5 text-white-50">
+        <div class="container">
+              <hr>
+              <p class="text-center">  © Developé par O  KONTA, Le GUERRIER 2023 <br>
+                              Mali/Mopti/ Medina-Coura  <br>
+                             63 12 46 50/ 79 58 35 12 <br>
+                              kontaoumarou14@gmail.com 
+              </p>
+        </div>
+  </footer> 
+
+<script src="{% static 'assets\bootstrap.js' %}"></script>
+</body>
+</html>
